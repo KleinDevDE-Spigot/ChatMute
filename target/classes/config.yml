@@ -1,0 +1,31 @@
+Type:
+  MySQL:
+    enabled: false
+    host: "localhost"
+    port: "3306"
+    database: "ChatMute"
+    username: ""
+    password: ""
+  SQLite:
+    enabled: true
+    FileName: "Mutes.db"
+  File:
+    enabled: false
+    FileName: "Mutes.yml"
+
+Permission:
+  mute: "ChatMute.Mute"
+  unmute: "ChatMute.UnMute"
+  mutes: "ChatMute.Mutes"
+  bypass: "ChatMute.Bypass"
+
+
+exceptions:
+  # If message contains one og the following lines
+  # Eg -> Message: 'I need Help, here was a Griefer!' | Line: 'I need Help'
+  contains:
+    - "I need help"
+  # If message equals one of the following lines
+  # Eg -> Message: 'I must go, bb' | Line: 'I must go, bb'
+  equals:
+    - "I must go, bb"
